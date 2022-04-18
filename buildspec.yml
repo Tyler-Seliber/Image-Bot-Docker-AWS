@@ -53,15 +53,14 @@ phases:
       - npm install
     finally:
       - echo "Pre-build phase completed!"
-  # build:
+  build:
   #   # run-as: Linux-user-name
   #   on-failure: ABORT
-  #   commands:
-  #     - command
-  #     - command
-  #   finally:
-  #     - command
-  #     - command
+    commands:
+      - echo "Starting bot..."
+      - npm start
+    finally:
+      - echo "Build phase completed!"
   # post_build:
   #   # run-as: Linux-user-name
   #   on-failure: ABORT
