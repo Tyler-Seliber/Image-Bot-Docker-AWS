@@ -41,7 +41,7 @@ phases:
       # - cd Image-Bot/
       - echo "Configuring environment secrets..."
       # - remove config.json if it is aleady present, otherwise supress the error
-      - rm config.json 2>/dev/null
+      # - rm config.json 2>/dev/null
       - echo "{ \n\tclientId:$CLIENT_ID, \n\tguildId:$GUILD_ID, \n\ttoken:$TOKEN \n}" >> config.json
     finally:
       - echo "Install phase completed!"
