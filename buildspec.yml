@@ -37,8 +37,8 @@ phases:
     #   runtime: version
     #   runtime: version
     commands:
-      - echo "Entering Image-Bot directory..."
-      - cd Image-Bot/
+      # - echo "Entering Image-Bot directory..."
+      # - cd Image-Bot/
       - echo "Configuring environment secrets..."
       # - remove config.json if it is aleady present, otherwise supress the error
       - rm config.json 2>/dev/null
