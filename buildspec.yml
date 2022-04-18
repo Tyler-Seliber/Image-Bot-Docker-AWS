@@ -79,30 +79,29 @@ phases:
 #     base-directory: location
 #     discard-paths: no | yes
 #     file-format: report-format
-# artifacts:
-#   files:
-#     - location
-#     - location
-#   name: artifact-name
-#   discard-paths: no | yes
-#   base-directory: location
-#   exclude-paths: excluded paths
-#   enable-symlinks: no | yes
-#   s3-prefix: prefix
-#   secondary-artifacts:
-#     artifactIdentifier:
-#       files:
-#         - location
-#         - location
-#       name: secondary-artifact-name
-#       discard-paths: no | yes
-#       base-directory: location
-#     artifactIdentifier:
-#       files:
-#         - location
-#         - location
-#       discard-paths: no | yes
-#       base-directory: location
+artifacts:
+  files:
+    - "build/*"
+  name: build-artifact-$AWS_REGION-$(date +%Y-%m-%d) 
+  # discard-paths: no | yes
+  # base-directory: location
+  # exclude-paths: excluded paths
+  enable-symlinks: yes
+  # s3-prefix: prefix
+  # secondary-artifacts:
+  #   artifactIdentifier:
+  #     files:
+  #       - location
+  #       - location
+  #     name: secondary-artifact-name
+  #     discard-paths: no | yes
+  #     base-directory: location
+  #   artifactIdentifier:
+  #     files:
+  #       - location
+  #       - location
+  #     discard-paths: no | yes
+  #     base-directory: location
 # cache:
 #   paths:
 #     - path
