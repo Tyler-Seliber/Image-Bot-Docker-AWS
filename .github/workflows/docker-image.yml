@@ -11,6 +11,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      GUILD_ID: ${{ secrets.GUILD_ID }}
+      TOKEN: ${{ secrets.TOKEN }}
+
 
     steps:
     - uses: actions/checkout@v3
